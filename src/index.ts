@@ -23,16 +23,13 @@ app.stage.interactive = true;
 
 document.body.appendChild(app.view);
 
-const worldWidth = 4096;
-const worldHeight = 4096;
-
 function setup() {
     setupScreenReSize(app);
 
     const playerInputSource = new PlayerInputSource();
     const aiManager = new AiManager();
 
-    const viewport = new Viewport(app, { width: worldWidth, height: worldHeight });
+    const viewport = new Viewport(app);
     app.stage.addChild(viewport);
 
     // Setup the landscape

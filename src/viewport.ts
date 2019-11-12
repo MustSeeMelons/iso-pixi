@@ -1,16 +1,9 @@
 import * as PIXI from "pixi.js";
-import { Tickable, InputSource } from "./utils/definitions";
-
-interface WorldSize {
-    width: number;
-    height: number;
-}
+import { Tickable } from "./utils/definitions";
 
 /**
- * Game world camera.
+ * The game world.
  * 
- * Viewports center is 0, 0. Must use PositionMapper helper
- * when adding objects to the world.
  *
  * @export
  * @class Viewport
@@ -18,16 +11,13 @@ interface WorldSize {
  */
 export class Viewport extends PIXI.Container implements Tickable {
     private app: PIXI.Application;
-    private worldSize: WorldSize;
     private followObject: PIXI.DisplayObject;
 
     constructor(
-        app: PIXI.Application,
-        worldSize: WorldSize
+        app: PIXI.Application
     ) {
         super();
         this.app = app;
-        this.worldSize = worldSize;
     }
 
     set setFollowObject(followObject: PIXI.DisplayObject) {

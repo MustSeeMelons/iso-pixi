@@ -1,7 +1,7 @@
 {
-    "name": "pixijs-typescript-starter",
+    "name": "iso-pixi",
     "version": "1.0.0",
-    "description": "basic pixijs + typescript setup",
+    "description": "isometric setup in pixi",
     "scripts": {
         "build": "webpack --mode=development --config webpack.config.js",
         "start": "webpack-dev-server"
